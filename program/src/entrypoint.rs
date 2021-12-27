@@ -2,7 +2,7 @@ use solana_program::{
     account_info::AccountInfo, entrypoint, entrypoint::ProgramResult, pubkey::Pubkey,
 };
 
-use crate::airdrop::Airdrop;
+use crate::processor::Airdrop;
 
 entrypoint!(process_airdrop);
 fn process_airdrop(
