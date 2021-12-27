@@ -10,6 +10,6 @@ fn process_airdrop(
     accounts: &[AccountInfo],
     extras: &[u8],
 ) -> ProgramResult {
-    let (amount, _rest) = extras.split_first().ok_or("Amount is required!").unwrap();
-    Airdrop::start(program_id, accounts, amount.clone().into())
+    //let (amount, _rest) = extras.split_first().ok_or("Amount is required!").unwrap();
+    Airdrop::transfer_nft(program_id, accounts, extras)
 }
